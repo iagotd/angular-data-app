@@ -22,25 +22,36 @@ In the following lines I will explain the necessary configurations to recreate t
 
 ## Command line configurations
 1) Create the angular project
+```
 ng new angular-data-app
+```
 
 2) Create the two components of this project: the form and the list pages.
+```
 ng new angular-form
+```
 
 3) Install bootstrap and jQuery
+4) Add project to a github repository (Create one first and copy the url)
+```
 npm install bootstrap --save
 npm install jquery --save
+```
+
 
 4) Add project to a github repository (Create one first and copy the url)
-`git init`
-`git remote add <url>`
-`git add .`
-`git commit -m "Comment"`
-`git push origin master`
-
+```
+git init
+git remote add <url>
+git add .
+git commit -m "Comment"
+git push origin master
+```
 
 5) Try it (by default it is located on localhost:4200)
+```
 ng serve --open
+```
   
 ## Code Configurations
 
