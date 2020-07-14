@@ -20,7 +20,7 @@ The template includes a NavBarMenu that allows users to change between screens.
 # SetUp Tutorial
 In the following lines I will explain the necessary configurations to recreate the development of the environment of this project.
 
-## Command line configurations
+## Command Line Configurations
 1) Create the angular project (after writing the command press yes and select CSS)
 ```
 ng new angular-data-app
@@ -57,7 +57,7 @@ git push origin master
 ng serve --open
 ```
   
-## Code Configurations
+## Code Configurations - Navigation
 
 1) Change the /src/app/app-routing-module.ts so it imports the new components and create the new rutes. Also, delete the default NgModule code. Here is the complete code of the file.
 ```
@@ -73,7 +73,7 @@ const app_routes: Routes = [
     { path: '**', pathMatch:'full', redirectTo: 'list'}
 ];
 
-export const app_routing = RouterModule.forRoot(app_routes, {useHash: true, scrollPositionRestoration: 'enabled'});
+export const AppRoutingModule = RouterModule.forRoot(app_routes, {useHash: true, scrollPositionRestoration: 'enabled'});
 ```
 
 2) Delete the default code of /src/app/app.component.html and add the NavBarMenu with the paths of the const app-routes previously added. Moreover, include the router-outlet so the code under the navBarMenu is the one selected by the /src/app/app-routing-module.ts. Here is the complete code of the file.
@@ -102,6 +102,16 @@ export const app_routing = RouterModule.forRoot(app_routes, {useHash: true, scro
 
 <router-outlet></router-outlet>
 ```
+
+3) At this point the NavBarMenu will work but bootstrap won't. So, we need to open /angular.json and include bootstrap in the style options. The style options will end up like this:
+```
+"styles": [
+    "src/styles.css",
+    "node_modules/bootstrap/dist/css/bootstrap.min.css"
+],
+```
+
+4) And boom, navigation working. If you want to try it, just `ng serve --open`. You are free to add whatever code you want in the html file of both components.
 
 ---
 
