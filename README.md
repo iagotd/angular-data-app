@@ -134,7 +134,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { HttpClient } from '@angular/common/http';
 ```
 
-3) Now it is important to know that there are different ways to trigger an angular function. In the case of the list component, the HTTP GET will be produced when the component is charged (onInit). It is fairly simple, so just change the constructor to include the HttpClient on it, create the GetRequest and introduce the data on a list of items (copy the code from /src/app/angular-list/angular-list.component.ts, there are barely any changes aside from the getAllPeople() function).
+3) It is important to know that there are different ways to trigger an angular function. In the case of the list component, the HTTP GET will be produced when the component is charged (onInit). It is fairly simple, so just change the constructor to include the HttpClient on it, create the GetRequest and introduce the data on a list of items (copy the code from /src/app/angular-list/angular-list.component.ts, there are barely any changes aside from the getAllPeople() function).
 
 4) Now, for the form ts file, you will send the form onSubmit so, you can delete the implementation of the onInit. Again, change the constructor and create a function to send the data with POST and other with GET so you can choose which method to use by commenting one of the lines in the onSubmit function.
 
