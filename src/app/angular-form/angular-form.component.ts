@@ -15,15 +15,30 @@ export class AngularFormComponent {
 
   log(x) {
     console.log(x);
-
   }
 
   onSubmit() {
+    this.getData();
+    this.postData();
+  }
 
-    let url = 'url';
-    let data = "{'name':'nombre'}";
+  getData() {
+    let url = 'http://intergalacticdb.me/api/characters';
 
     this.http.get(url).toPromise().then(data => {
+      console.log(data);
+      
+      for (let key in data)
+        if (data.hasOwnProperty(key))
+          this.items.push("data[key]");
+    });
+  }
+
+  postData() {
+    let url = 'http://intergalacticdb.me/api/characters';
+    let data = "{'name':'nombre'}";
+
+    this.http.post(url, data).toPromise().then(data => {
       console.log(data);
       
       for (let key in data)
