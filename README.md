@@ -140,6 +140,14 @@ import { HttpClient } from '@angular/common/http';
 
 5) At this point it might be useful to copy the html code of angular-data-app/src/app/angular-list/angular-form.component.html and angular-data-app/src/app/angular-list/angular-list.component.html. Basically in the list html file you are getting the fetched items and printing them in a table and, in the form file, you are just triggering the onSubmit function when clicking the Submit button.
 
+6) If you want to see it with more clarity, you can add the following code in the /src/styles.css. It will give the form and the table some padding and it will showcase in red the wrong input boxes.:
+```
+body { padding: 20px; }
+.form-control.ng-touched.ng-invalid {
+    border: 2px solid red;
+}
+```
+
 
 ---
 
