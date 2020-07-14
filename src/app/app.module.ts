@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
-import { AppRoutingModule } from './app-routing.module';
+import { app_routing } from './app-routes';
 import { AppComponent } from './app.component';
 import { AngularFormComponent } from './angular-form/angular-form.component';
 import { AngularListComponent } from './angular-list/angular-list.component';
@@ -17,9 +17,9 @@ import { AngularListComponent } from './angular-list/angular-list.component';
   imports: [
     BrowserModule,
     HttpClientModule,
-    AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    app_routing
   ],
   providers: [],
   bootstrap: [AppComponent]
