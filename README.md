@@ -26,20 +26,23 @@ In the following lines I will explain the necessary configurations to recreate t
 ng new angular-data-app
 ```
 
-2) Create the two components of this project: the form and the list pages.
+2) Enter the project folder.
+```
+cd angular-data-app
+```
+
+3) Create the two components of this project: the form and the list pages.
 ```
 ng new angular-form
 ```
 
-3) Install bootstrap and jQuery
-4) Add project to a github repository (Create one first and copy the url)
+4) Install bootstrap and jQuery
 ```
 npm install bootstrap --save
 npm install jquery --save
 ```
 
-
-4) Add project to a github repository (Create one first and copy the url)
+5) Add project to a github repository (Create one first and copy the url).
 ```
 git init
 git remote add <url>
@@ -48,7 +51,7 @@ git commit -m "Comment"
 git push origin master
 ```
 
-5) Try it (by default it is located on localhost:4200)
+6) Try it (by default it is located on localhost:4200).
 ```
 ng serve --open
 ```
