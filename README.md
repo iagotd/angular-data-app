@@ -21,7 +21,7 @@ The template includes a NavBarMenu that allows users to change between screens.
 In the following lines I will explain the necessary configurations to recreate the development of the environment of this project.
 
 ## Command line configurations
-1) Create the angular project
+1) Create the angular project (after writing the command press yes and select CSS)
 ```
 ng new angular-data-app
 ```
