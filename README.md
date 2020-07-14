@@ -33,7 +33,8 @@ cd angular-data-app
 
 3) Create the two components of this project: the form and the list pages.
 ```
-ng new angular-form
+ng g c angular-form
+ng g c angular-list
 ```
 
 4) Install bootstrap and jQuery
@@ -58,6 +59,49 @@ ng serve --open
   
 ## Code Configurations
 
+1) Change the /src/app/app-routing-module.ts so it imports the new components and create the new rutes. Also, delete the default NgModule code. Here is the complete code of the file.
+```
+import { RouterModule, Routes } from '@angular/router';
+
+import { AngularFormComponent } from './angular-form/angular-form.component';
+import { AngularListComponent } from './angular-list/angular-list.component';
+
+
+const app_routes: Routes = [
+    { path: 'list', component: AngularListComponent},
+    { path: 'form', component: AngularFormComponent},
+    { path: '**', pathMatch:'full', redirectTo: 'list'}
+];
+
+export const app_routing = RouterModule.forRoot(app_routes, {useHash: true, scrollPositionRestoration: 'enabled'});
+```
+
+2) Delete the default code of /src/app/app.component.html and add the NavBarMenu with the paths of the const app-routes previously added. Moreover, include the router-outlet so the code under the navBarMenu is the one selected by the /src/app/app-routing-module.ts. Here is the complete code of the file.
+
+```
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">Navbar</a>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['list']">List <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['form']">Form <span class="sr-only">(current)</span></a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<br>
+
+<router-outlet></router-outlet>
+```
 
 ---
 
