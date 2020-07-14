@@ -32,11 +32,15 @@ npm install bootstrap --save
 npm install jquery --save
 
 4) Add project to a github repository (Create one first and copy the url)
-git init
-git remote add <url>
-git add .
-git commit -m "Comment"
-git push origin master
+`git init`
+`git remote add <url>`
+`git add .`
+`git commit -m "Comment"`
+`git push origin master`
+
+
+5) Try it (by default it is located on localhost:4200)
+ng serve --open
   
 ## Code Configurations
 
