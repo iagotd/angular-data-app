@@ -1,23 +1,19 @@
 # AngularDataApp
-
----
-
-# Summary
 AngularJS template of a small website that allows you to HTTP POST a formulary and HTTP GET data from an API so It can be shown in a table.
 
-## Functionalities
+## :hammer_and_wrench: Functionalities :hammer_and_wrench:
 ### NavBarMenu
 The template includes a NavBarMenu that allows users to change between screens.
 
 ### Screen 1 - List
 - [x] This screen has a table that is filled onInit with fetched data from a free online API REST.
-- [ ] You can also send a HTTP DELETE of the item by pressing the red crosses on the rows of the table.
+- [x] You can also send a HTTP DELETE of the item by pressing the red crosses on the rows of the table.
 
 ### Screen 2 - Form
 - [x] This screen allows users to create an item and send it by HTTP POST to an url
 
 ---
-# SetUp Tutorial
+# :rocket: SetUp Tutorial :rocket:
 In the following lines I will explain the necessary configurations to recreate the development of the environment of this project.
 
 ## Command Line Configurations
