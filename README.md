@@ -43,7 +43,7 @@ npm install jquery --save
 5) Add project to a github repository (Create one first and copy the url).
 ```
 git init
-git remote add <url>
+git remote add origin <url>
 git add .
 git commit -m "Comment"
 git push origin master
